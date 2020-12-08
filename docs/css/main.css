@@ -1,24 +1,28 @@
-.section-1 h2 {
-    color: darkviolet;
-}
-.content code {
-    color: red;
-}
-.menu a + a {
-    margin-left: 20px;
-}
-h2, h3, h4, h5, h6 {
-    font-size: 1em;
-}
 h1 {
     margin: -16px 0 0;
 }
-
-.how pre {
+pre {
     font-size: 0.85em;
 }
 .only-data {
     background-color: antiquewhite;
     padding: 8px 16px;
     border-radius: 10px;
+    margin: 32px 0;
+}
+.about {
+    margin-top: 32px;
+    font-size: 0.85em;
+}
+.basic-render .download {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.subscribe {
+    padding: 16px 32px;
+    border-radius: 10px;
+    margin: 32px 0;
+    box-shadow: 0 2px 43px -4px rgba(0,0,0,.19);
+    background-color: #99ebfa;
 }

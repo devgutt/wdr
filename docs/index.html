@@ -7,63 +7,78 @@
     "what": {
         "title" : "## What is WDR?",
         "description": [
-            "This page is a valid **[JSON](https://www.json.org/)**!",
-            "Check the source code. Instead of the habitual HTML and CSS, you will see just a plain JSON with the page's data.",
-            "WDR is a format to separate website's **data** and **presentation**."
+            "This website is a valid **[JSON](//www.json.org/)**!",
+            "Check the source code. Instead of the habitual HTML and CSS, you will see just a plain JSON with the website's information.",
+            "WDR is a format to separate the website's **information** and **rendering**.",
+            "The website is readily available to be consumed outside the browser via JSON, but also still presentable to users accessing through the web browser."
         ]
     },
+    "subscribe": "I'm creating a **blog platform** using this concept. Follow me on [twitter](//twitter.com/gpiresnt) to be notified when is ready! ✨",
     "how": {
         "title": "## How it works",
         "description": [
             "It works by embedding a small initiator at the end of the JSON file.",
-            "For example, this is a valid webpage:",
-            "``` {\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;script src=/render.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n }```",
-            "The script `render.js` receives the JSON as input and is resposible to render the page."
+            "For example, this is a valid JSON and web page:",
+            "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;script src=/render.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n}```",
+            "The script `render.js` receives the JSON as input and is responsible to render the page."
         ]
-    },
-    "why": {
-        "title": "## Why?",
-        "description": [
-            "Websites are the pillar of the internet. It is easy to setup"
-        ]
-    },
-    "principles": {
-        "title": "## Principles",
-        "only-data" : {
-            "title": "** Only data **",
-            "description": [
-                "The JSON must describe only pure information without any concern about design or markup. The render script is responsible for creating the markup and design necessary to present the information on the browser.",
-                "The reason for this is the browser is only **one** of many other ways that the information will be consumed outside your website.",
-                "For example, another website could get the JSON and extract only some updates, or a section. Probably they will want to present the information in a different way, or even don't present at all and just use the information in combination with others to create something completely different of what you anticipate."
-            ]
-        
-        }
     },
     "usage": {
-        "title": "## Usage"
-    },
-    "faq": {
-        "title": "## FAQ",
-        "questions": [
-            {
-                "question" : "**The search engines will process the website correctly?**",
-                "anwser": [
-                    "The pages are rendered with javascript, but most search engines, like Google or Bing, process javascript pages correctly.",
-                    "You can test this page on [Google](https://developers.google.com/speed/pagespeed/insights/) or [Bing](https://www.bing.com/webmaster/tools/mobile-friendliness) and see that they show the page rendered correctly."
-                ]
-            },
-            {
-                "question" : "**Is it make too easy for crawlers to steal data from my website**",
-                "anwser": ""
-            },
-            {
-                "question" : "****",
-                "anwser": ""
-            }
+        "title": "## Usage",
+        "description": [
+            "First create an HTML file with the JSON information:",
+            "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\"\n}```",
+            "Include the initiator at the end:",
+            "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n }```",
+            "The next section will explain how to create the `render.js`."
         ]
     },
+    "only-data": {
+        "title": "** Only information **",
+        "description": [
+            "The JSON must contain only pure information without any concern about design or markup. All the design and markup required to render the page must be inside the rendering script."
+        ]
+    },
+    "create-render": {
+        "title": "## Creating a render",
+        "description": [
+            "Create a new javascript project and install the package `wdr-loader`:",
+            "```npm install wdr-loader```",
+            "Call the `loader` function to retrieve the JSON:",
+            "```import loader from 'wdr-loader';\nloader(data => render(data));```",
+
+            "Create a `render` function to handle the data and create the HTML. Bellow is an example using simple `innerHTML`:",
+
+            "```function render(data) {\n    document.head.innerHTML = `\n      &lt;meta charset=\"utf-8\"&gt;\n      &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /&gt;\n      &lt;title&gt;${data.title}&lt;/title&gt;`;\n\n    document.body.innerHTML = `\n      &lt;section&gt;\n        &lt;h1&gt;${data.title}&lt;/h1&gt;\n        &lt;p&gt;${data.description}&lt;p&gt;\n      &lt;/section&gt;`;\n}```",
+
+            "The code is available on [GitHub](//github.com/webdatarender/wdr-loader)."
+        ]
+    },
+    "basic-render": {
+        "title": "## Basic render",
+        "description": [
+            "If you don't want to create a render right now, it is available a basic render (used on this very page) to immediate use:"
+        ],
+        "download": "[render-basic-1.0.3.js](//webdatarender.com/dist/render-basic-1.0.3.js)",
+        "instructions": [
+            "Just download the script and include it on the JSON directly:",
+            "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render-basic-1.0.3.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n }```",
+            "The code is available on [GitHub](//github.com/webdatarender/wdr-render-basic)."
+        ]
+    },
+    "remarks": {
+        "title": "## Remarks",
+        "description": [
+            "• The page is rendered in [quirks mode](//developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) and can present some layout differences on different browsers.",
+            "• Although javascript is necessary to render the page, most search engines will be able to read the page correctly.",
+            "• If you want to display the JSON for users that have javascript disabled, you can add the following code at the initiator: ```&#x3C;noscript&#x3E;&#x3C;style&#x3E;html{display:block !important; white-space:pre}&#x3C;/style&#x3E;&#x3C;/noscript&#x3E;```"
+        ]
+    },
+    "about": {
+        "creator": "Created by [@gpiresnt](//twitter.com/gpiresnt)"
+    },
     "#render": {
-        "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-1.0.2.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
+        "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-1.0.3.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
         "css": "css/main.css"
     }
 }
