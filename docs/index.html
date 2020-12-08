@@ -9,11 +9,11 @@
         "description": [
             "This website is a valid **[JSON](//www.json.org/)**!",
             "Check the source code. Instead of the habitual HTML and CSS, you will see just a plain JSON with the website's information.",
-            "WDR is a format to separate the website's **information** and **rendering**.",
+            "WDR is a format to separate the website's **information** and **design**.",
             "The website is readily available to be consumed outside the browser via JSON, but also still presentable to users accessing through the web browser."
         ]
     },
-    "subscribe": "I'm creating a **blog platform** using this concept. Follow me on [twitter](//twitter.com/gpiresnt) to be notified when is ready! ✨",
+    "subscribe": "I'm creating a **blog platform** using this concept. Follow me on [Twitter](//twitter.com/gpiresnt) to be notified when is ready! ✨",
     "how": {
         "title": "## How it works",
         "description": [
@@ -28,13 +28,13 @@
         "description": [
             "First create an HTML file with the JSON information:",
             "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\"\n}```",
-            "Include the initiator at the end:",
+            "Include the initiator at the bottom:",
             "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n }```",
-            "The next section will explain how to create the `render.js`."
+            "The next section explains how to create the `render.js`."
         ]
     },
     "only-data": {
-        "title": "** Only information **",
+        "title": "** Pure information **",
         "description": [
             "The JSON must contain only pure information without any concern about design or markup. All the design and markup required to render the page must be inside the rendering script."
         ]
@@ -47,21 +47,21 @@
             "Call the `loader` function to retrieve the JSON:",
             "```import loader from 'wdr-loader';\nloader(data => render(data));```",
 
-            "Create a `render` function to handle the data and create the HTML. Bellow is an example using simple `innerHTML`:",
+            "Create a `render` function to handle the data and render the HTML. Below is an example using simple `innerHTML`:",
 
             "```function render(data) {\n    document.head.innerHTML = `\n      &lt;meta charset=\"utf-8\"&gt;\n      &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /&gt;\n      &lt;title&gt;${data.title}&lt;/title&gt;`;\n\n    document.body.innerHTML = `\n      &lt;section&gt;\n        &lt;h1&gt;${data.title}&lt;/h1&gt;\n        &lt;p&gt;${data.description}&lt;p&gt;\n      &lt;/section&gt;`;\n}```",
 
-            "The code is available on [GitHub](//github.com/webdatarender/wdr-loader)."
+            "The `wdr-loader` code is available on [GitHub](//github.com/webdatarender/wdr-loader) with an example."
         ]
     },
     "basic-render": {
         "title": "## Basic render",
         "description": [
-            "If you don't want to create a render right now, it is available a basic render (used on this very page) to immediate use:"
+            "If you don't want to create a render right now, it is available a basic render (used on this very website) to immediate use:"
         ],
         "download": "[render-basic-1.0.3.js](//webdatarender.com/dist/render-basic-1.0.3.js)",
         "instructions": [
-            "Just download the script and include it on the JSON directly:",
+            "Just download the script and include it on the initiator directly:",
             "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render-basic-1.0.3.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n }```",
             "The code is available on [GitHub](//github.com/webdatarender/wdr-render-basic)."
         ]
@@ -73,6 +73,10 @@
             "• Although javascript is necessary to render the page, most search engines will be able to read the page correctly.",
             "• If you want to display the JSON for users that have javascript disabled, you can add the following code at the initiator: ```&#x3C;noscript&#x3E;&#x3C;style&#x3E;html{display:block !important; white-space:pre}&#x3C;/style&#x3E;&#x3C;/noscript&#x3E;```"
         ]
+    },
+    "support": {
+        "title": "## Need Help?",
+        "description": "If you need help or have some feedback, send me an [email](mailto:gpiresnt@gmail.com)."
     },
     "about": {
         "creator": "Created by [@gpiresnt](//twitter.com/gpiresnt)"

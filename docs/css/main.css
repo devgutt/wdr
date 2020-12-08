@@ -11,7 +11,7 @@ pre {
     margin: 32px 0;
 }
 .about {
-    margin-top: 32px;
+    margin-top: 48px;
     font-size: 0.85em;
 }
 .basic-render .download {
@@ -23,6 +23,5 @@ pre {
     padding: 16px 32px;
     border-radius: 10px;
     margin: 32px 0;
-    box-shadow: 0 2px 43px -4px rgba(0,0,0,.19);
     background-color: #99ebfa;
 }
