@@ -9,22 +9,16 @@
         "description": [
             "This page is a valid **[JSON](https://www.json.org/)**!",
             "Check the source code. Instead of the habitual HTML and CSS, you will see just a plain JSON with the page's data.",
-            "WDR is a format to separate website's **data** and **presentation** (rendering)."
+            "WDR is a format to separate website's **data** and **presentation**."
         ]
     },
     "how": {
         "title": "## How it works",
         "description": [
-            "It works embeding a small javascript initiator in the end of the JSON file.",
+            "It works by embedding a small initiator at the end of the JSON file.",
             "For example, this is a valid webpage:",
-            "[&lt;teste&gt;](#)",
-            "[this is <b>teste</b>](#)",
-            "&lt;html hidden&gt;",
-            "```&lt;html hidden```",
-            "```&lt;html hidden&gt;```",
-            "```x <b> hello</b>```",
-
-            "``` {\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/dist/render.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n }```" 
+            "``` {\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;script src=/render.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n }```",
+            "The script `render.js` receives the JSON as input and is resposible to render the page."
         ]
     },
     "why": {
@@ -32,6 +26,21 @@
         "description": [
             "Websites are the pillar of the internet. It is easy to setup"
         ]
+    },
+    "principles": {
+        "title": "## Principles",
+        "only-data" : {
+            "title": "** Only data **",
+            "description": [
+                "The JSON must describe only pure information without any concern about design or markup. The render script is responsible for creating the markup and design necessary to present the information on the browser.",
+                "The reason for this is the browser is only **one** of many other ways that the information will be consumed outside your website.",
+                "For example, another website could get the JSON and extract only some updates, or a section. Probably they will want to present the information in a different way, or even don't present at all and just use the information in combination with others to create something completely different of what you anticipate."
+            ]
+        
+        }
+    },
+    "usage": {
+        "title": "## Usage"
     },
     "faq": {
         "title": "## FAQ",

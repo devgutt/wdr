@@ -14,3 +14,11 @@ h1 {
     margin: -16px 0 0;
 }
 
+.how pre {
+    font-size: 0.85em;
+}
+.only-data {
+    background-color: antiquewhite;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
