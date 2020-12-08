@@ -19,7 +19,7 @@
         "description": [
             "It works by embedding a small initiator at the end of the JSON file.",
             "For example, this is a valid JSON and web page:",
-            "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;script src=/render.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n}```",
+            "```{\n  \"title\": \"Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;script src=/render.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n}```",
             "The script `render.js` receives the JSON as input and is responsible to render the page."
         ]
     },
@@ -27,9 +27,9 @@
         "title": "## Usage",
         "description": [
             "First create an HTML file with the JSON information:",
-            "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\"\n}```",
+            "```{\n  \"title\": \"Example Page\",\n  \"description\": \"This is an example.\"\n}```",
             "Include the initiator at the bottom:",
-            "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n }```",
+            "```{\n  \"title\": \"Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n}```",
             "The next section explains how to create the `render.js`."
         ]
     },
@@ -62,7 +62,7 @@
         "download": "[render-basic-1.0.3.js](//webdatarender.com/dist/render-basic-1.0.3.js)",
         "instructions": [
             "Just download the script and include it on the initiator directly:",
-            "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render-basic-1.0.3.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n }```",
+            "```{\n  \"title\": \"# Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render-basic-1.0.3.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n}```",
             "The code is available on [GitHub](//github.com/webdatarender/wdr-render-basic)."
         ]
     },
@@ -70,16 +70,17 @@
         "title": "## Remarks",
         "description": [
             "• The page is rendered in [quirks mode](//developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) and can present some layout differences on different browsers.",
-            "• Although javascript is necessary to render the page, most search engines will be able to read the page correctly.",
-            "• If you want to display the JSON for users that have javascript disabled, you can add the following code at the initiator: ```&#x3C;noscript&#x3E;&#x3C;style&#x3E;html{display:block !important; white-space:pre}&#x3C;/style&#x3E;&#x3C;/noscript&#x3E;```"
+            "• Although javascript is necessary to render the page, most search engines, like [Google](https://developers.google.com/speed/pagespeed/insights/?url=webdatarender.com) or [Bing](https://www.bing.com/webmaster/tools/mobile-friendliness), will be able to read the page correctly.",
+            "• If you want to display the JSON for users that have javascript disabled, you can include `noscript` at the initiator: ```&#x3C;noscript&#x3E;&#x3C;style&#x3E;html{display:block !important; white-space:pre}&#x3C;/style&#x3E;&#x3C;/noscript&#x3E;```"
         ]
     },
     "support": {
-        "title": "## Need Help?",
-        "description": "If you need help or have some feedback, send me an [email](mailto:gpiresnt@gmail.com)."
+        "title": "## Need Help? 👋",
+        "description": "If you need help, have any feedback or just want to say hi, send me an [email](mailto:gpiresnt@gmail.com)."
     },
     "about": {
-        "creator": "Created by [@gpiresnt](//twitter.com/gpiresnt)"
+        "creator": "Created by [@gpiresnt](//twitter.com/gpiresnt)",
+        "logo": "![logo](/img/logo.png)"
     },
     "#render": {
         "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-1.0.3.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",

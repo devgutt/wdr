@@ -14,6 +14,10 @@ pre {
     margin-top: 48px;
     font-size: 0.85em;
 }
+.about .logo {
+    text-align: center;
+    margin: 32px 0 0;
+}
 .basic-render .download {
     display: inline-block;
     border: 1px solid #ddd;
