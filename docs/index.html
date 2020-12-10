@@ -1,11 +1,10 @@
 {
-    "#info": {
-        "title": "WDR"
-    },
+    "#title": "WDR",
     "subtitle": "Web Data Render",
-    "title": "# WDR",
+    "name": "WDR",
+    "menu": "[Home](/) [Tutorial](/tutorial.html) [Basic Render](/basic-render.html)",
     "what": {
-        "title" : "## What is WDR?",
+        "title" : "What is WDR?",
         "description": [
             "This website is a valid **[JSON](//www.json.org/)**!",
             "Check the source code. Instead of the habitual HTML and CSS, you will see just a plain JSON with the website's information.",
@@ -15,7 +14,7 @@
     },
     "subscribe": "I'm creating a **blog platform** using this concept. Follow me on [Twitter](//twitter.com/gpiresnt) to be notified when is ready! ✨",
     "how": {
-        "title": "## How it works",
+        "title": "How it works",
         "description": [
             "It works by embedding a small initiator at the end of the JSON file.",
             "For example, this is a valid JSON and web page:",
@@ -24,36 +23,45 @@
         ]
     },
     "usage": {
-        "title": "## Usage",
+        "title": "Usage",
         "description": [
             "Follow the [tutorial](/tutorial.html) to learn how to use WDR."
         ]
     },
     "examples": {
-        "title": "## Some examples",
+        "title": "Some examples",
         "description": [
             "This very website!",
             "[Evaluatly](https://evaluatly.com)"
         ]
     },
-    "#updates": {
-        "title": "## Updates",
-        "@updates": [
+    "updates": {
+        "title": "Updates",
+        "items": [
             {
-                "title": "This is a text"
+                "#id": "2",
+                "description": "Basic render [1.0.4](https://github.com/webdatarender/wdr-render-basic/releases/tag/v1.0.4) and [documentation](/basic-render.html) updated.",
+                "date": "10 Dec 2020",
+                "#url": "https://webdatarender.com/basic-render.html"
+            },
+            {
+                "#id": "1",
+                "description": "Introducing WDR - Web Data Render at [webdatarender.com](https://webdatarender.com)",
+                "date": "09 Dec 2020",
+                "#url": "https://webdatarender.com"
             }
         ]
     },
     "support": {
-        "title": "## Need Help? 👋",
-        "description": "If you need help, have any feedback or just want to say hi, send me an [email](mailto:gpiresnt@gmail.com)."
+        "title": "Need Help? 👋",
+        "description": "If you need help, have any feedback, or just want to say hi, send me an [email](mailto:gpiresnt@gmail.com)."
     },
     "about": {
         "creator": "Created by [@gpiresnt](//twitter.com/gpiresnt)",
         "logo": "![logo](/img/logo.png)"
     },
     "#render": {
-        "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-1.0.3.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
-        "css": "css/main.css"
+        "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-1.0.4.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
+        "css": "/css/main.css"
     }
 }

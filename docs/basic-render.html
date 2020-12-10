@@ -1,0 +1,66 @@
+{
+    "#title": "WDR Basic Render",
+    "subtitle": "Web Data Render",
+    "name": "WDR",
+    "menu": "[Home](/) [Tutorial](/tutorial.html) [Basic Render](/basic-render.html)",
+    "title": "Basic Render",
+    "description": [
+        "This is a basic render to build the HTML page from JSON.",
+        "It is easy to use and created for an ultra-fast start. Just create the JSON data with the instructions below and render the page using the script.",
+        "Although limited, this render is very powerful and can render a great variety of elements, including headers, paragraphs, images, links, and sections. You can customize the style with CSS and use basic formatting.",
+        "This website uses the basic render.✨"
+    ],
+    "install": {
+        "title": "Setup",
+        "description": "Download the script [render-basic-1.0.4.js](//webdatarender.com/dist/render-basic-1.0.4.js) and include it directly in the initiator:",
+        "instructions": [
+            "```{\n  \"title\": \"Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render-basic-1.0.4.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n}```"
+        ]
+    },
+    "style": {
+        "title": "Styling",
+        "description": [
+            "Every element rendered includes its `key` name on the `class` attribute, and the layout can be customized via CSS.",
+            "To add a custom CSS, include a `css` key on the `#render` element. For example:",
+            "```\"#render\": {\n \"_\": \"&lt;html hidden&gt;&lt;script src=/dist/render-basic-1.0.0.js&gt;&lt;/script&gt;&lt;/html&gt;\",\n \"css\": \"/css/main.css\"\n}```",
+            "The CSS will be loaded automatically."
+        ]
+    },
+    "formatting": {
+        "title": "Basic formatting",
+        "description": [
+            "The render accepts some basic formatting:",
+            "`**` or `__` for **bold**",
+            "`*` or `_` for *italic*",
+            "`~~` for ~~strike-through~~",
+            "`\\n` for new line",
+            "`[text](url)` to create a link with the label `text` to `url`.",
+            "`![text](url)` to create an image with the alt `text` with `url`.",
+            "`#`, `##`, … for h1...6 tags",
+            "Use ` for inline code",
+            "Use ``` for code block"
+        ]
+    },
+    "keys": {
+        "title": "Keys with special meanings",
+        "description": [
+            "`#` at the start of the key will not be rendered.",
+            "`#title`: Title of the page. If not informed, `title` is used.",
+            "`title`: Transforms the content to HTML h1...6 tags.",
+            "If the title key is inside the root, it will transform into h1. If it is inside an object, it will transform into h2 to h6, for every new nested object."
+        ]
+    },
+    "support": {
+        "title": "Support",
+        "description": "Send an [email](mailto:gpiresnt@gmail.com) for support.",
+        "github": "The code is available on [GitHub](//github.com/webdatarender/wdr-render-basic)."
+    },
+    "about": {
+        "logo": "![logo](/img/logo.png)"
+    },
+    "#render": {
+        "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-1.0.4.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
+        "css": "/css/main.css"
+    }
+}
+

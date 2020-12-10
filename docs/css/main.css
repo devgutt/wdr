@@ -1,14 +1,31 @@
 h1 {
-    margin: -16px 0 0;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-top: 48px;
 }
 pre {
     font-size: 0.85em;
 }
+main > .name {
+    font-size: 3em;
+    font-weight: 900;
+    margin: -16px 0 0;
+}
+main > .menu {
+    margin: 8px -8px 8px;
+}
+main > .menu a {
+    padding: 0px 8px;
+}
 .only-data {
     background-color: antiquewhite;
-    padding: 8px 16px;
+    padding: 4px 16px 8px;
     border-radius: 10px;
     margin: 32px 0;
+}
+.only-data h2 {
+    margin-top: 16px;
+    font-size: 1em;
 }
 .about {
     margin-top: 48px;
@@ -18,8 +35,8 @@ pre {
     text-align: center;
     margin: 32px 0 0;
 }
-.basic-render .download {
-    display: inline-block;
+.install .description a {
+    -display: inline-block;
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -28,4 +45,9 @@ pre {
     border-radius: 10px;
     margin: 32px 0;
     background-color: #99ebfa;
+}
+.updates p.date {
+    margin-top: -12px;
+    color: #444;
+    font-size: 0.85em;
 }
