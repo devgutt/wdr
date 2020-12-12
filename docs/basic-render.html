@@ -12,9 +12,10 @@
     ],
     "install": {
         "title": "Setup",
-        "description": "Download the script [render-basic-1.0.4.js](//webdatarender.com/dist/render-basic-1.0.4.js) and include it directly in the initiator:",
+        "#latest": "1.0.4",
+        "description": "Download the script [render-basic-{{ install.#latest }}.js](//webdatarender.com/dist/render-basic-{{ install.#latest }}.js) and include it directly in the initiator:",
         "instructions": [
-            "```{\n  \"title\": \"Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render-basic-1.0.4.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n}```"
+            "```{\n  \"title\": \"Example Page\",\n  \"description\": \"This is an example.\",\n  \"#render\": \"&lt;html hidden&gt;&lt;meta charset=utf-8&gt;&lt;script src=/render-basic-{{ install.#latest }}.js&gt;&lt;/script&gt;&lt;/html&gt;\"\n}```"
         ]
     },
     "style": {
@@ -34,7 +35,7 @@
             "`*` or `_` for *italic*",
             "`~~` for ~~strike-through~~",
             "`\\n` for new line",
-            "`[text](url)` to create a link with the label `text` to `url`.",
+            "`[text](url)` to create a link with the label `text` to `url`. If `text` is not informed, `url` is used in the label instead.",
             "`![text](url)` to create an image with the alt `text` with `url`.",
             "`#`, `##`, … for h1...6 tags",
             "Use ` for inline code",
@@ -59,7 +60,7 @@
         "logo": "![logo](/img/logo.png)"
     },
     "#render": {
-        "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-1.0.4.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
+        "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-master.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
         "css": "/css/main.css"
     }
 }
