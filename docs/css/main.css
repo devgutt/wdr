@@ -46,8 +46,46 @@ main > .menu a {
     margin: 32px 0;
     background-color: #99ebfa;
 }
-.updates p.date {
-    margin-top: -12px;
+.main-updates .items > p em {
     color: #444;
     font-size: 0.85em;
+}
+.main-updates .items > p strong {
+    background-color: #ffa9a9;
+    color: #350405;
+    padding: 4px 8px;
+    margin: 0px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+.updates > div {
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    padding: 8px 24px;
+    margin: 16px 0;
+}
+.updates h3 {
+    margin-top: 8px;
+}
+.updates .description {
+    font-size: 0.85rem;
+}
+.updates .description p {
+    margin: 8px 0;
+}
+.updates p.date {
+    margin-top: -8px;
+    color: #444;
+    font-size: 0.85em;
+}
+.post-info {
+    margin: -16px 0 32px 0;
+    color: #444;
+    font-size: 0.90em;
+}
+.capture {
+    border-radius: 4px;
+    background-color: #ffeebd;
+    padding: 16px 24px;
+    margin: 16px 0;
 }

@@ -1,0 +1,68 @@
+{
+    "subtitle": "Web Data Render",
+    "name": "WDR",
+    "menu": "{{[/] menu}}",
+    "title": "Hyperdata",
+    "post-info": "14 Dec 2020 by Gustavo Pires",
+    "intro": {
+        "desrciption": [
+            "A few days ago, I introduced WDR (Web Data Render) as a way to separate website data and presentation. The website page is a JSON with pure information (no markups). The rendering is made by the script at the bottom of the page.",
+            "Because the website page is a valid JSON, it is really simple to get the information and reuse it for other purposes.",
+            "To make it easy to get information from WDR websites, I'd like to introduce a new feature, available in the basic render today: **Hyperdata.**"
+        ]
+    },
+    "local": {
+        "#code": "42",
+        "desrciption": [
+            "Hyperdata is a small piece of code that you can place on the JSON to capture on-the-fly information.", 
+            "To demonstrate this feature, let's create a new piece of information on this very page:",
+            "```{\n  \"local\": { \"#code\": \"42\" } \n}```",
+            "You can check the source code of this page to see the `local.#code` key on the JSON.",
+            "Now, I can show this information easily using the new **hyperdata** feature `\\{{ }}`:",
+            "``` The code is \\{{ local.#code }}. ```",
+            "Which will output",
+            { "capture": "The code is {{ local.#code }}" },
+            "I can reference any part of the JSON, just using the information path.",
+            "But every page on a website in WDR is a valid JSON, so I can capture information of any page too.", 
+            "Let’s do this by putting an URL in front of the JSON path:",
+            "``` The version is \\{{ [/basic-render.html] install.#version }}```",
+            "This outputs ",
+            { "capture": "The version is {{ [/basic-render.html] install.#version }}" },
+            "Because the page `basic-render.html` is a valid JSON and is pure data, I was able to capture and show the information on the fly.",
+            "This implies that the **whole website is a database** and can be accessed on any page!"
+        ]
+    },
+    "beyond": {
+        "title": "Expanding the horizons",
+        "desrciption": [
+            "Right now you should have figure out where it is going. The website is online. There is no difference between an external or internal page. The hyperdata URL could be any website page if it is a valid JSON.",
+            "Let’s demonstrate this with another website that uses WDR, [evaluatly](https://evaluatly.com):",
+            "```Title: \\{{ [https://evaluatly.com] hero.title }}```",
+            "that outputs",
+            { "capture": "Title: {{ [https://evaluatly.com] hero.title }}" },
+            "And that is it. You just got the information directly from the evalualty website!",
+            "Let this last part sink in for a minute. You just get information from an external website as easy as writing a paragraph.",
+            "The information is always **fresh** and **up-to-date**. If the source website is updated, your page will show the same information.",
+            "Also, you can get information of many websites, and your page will be **always up-to-date** for all websites seamlessly.",
+            "And remember, the website is static!"
+        ]
+    },
+    "json": {
+        "title": "JSON Website",
+        "desrciption": [
+            "The hyperdata is only possible because the website is JSON.",
+            "It makes really easy to get information of any page.",
+            "Because the JSON is pure data, it is very lightweight. All the rendering information is elegantly hidden when you capture the JSON.",
+            "I believe this is the future of the web. Imagine every website as a source of pure information. Every website an easily accessible database. Sounds like an exciting future to me.",
+            "And you can try it now! Follow the instructions on [Get started](/start.html) and the [basic render](/basic-render.html). Let me know what you think."
+        ]
+    },
+    "subscribe": "I'm creating a **blog platform** using WDR. Follow me on [Twitter](//twitter.com/gpiresnt) to be notified when it's ready! ✨",
+    "about": {
+        "logo": "![logo](/img/logo.png)"
+    },
+    "#render": {
+        "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-master.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
+        "css": "/css/main.css"
+    }
+}
