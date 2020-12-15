@@ -3,6 +3,7 @@
     "name": "WDR",
     "menu": "{{[/] menu}}",
     "title": "Hyperdata",
+    "#future": "is here",
     "post-info": "14 Dec 2020 by Gustavo Pires",
     "intro": {
         "desrciption": [
@@ -12,16 +13,15 @@
         ]
     },
     "local": {
-        "#code": "42",
         "desrciption": [
             "Hyperdata is a small piece of code that you can place on the JSON to capture information on the fly.", 
             "To demonstrate this feature, let's create a new piece of information on this very page:",
-            "```{\n  \"local\": { \"#code\": \"42\" } \n}```",
-            "You can check the source code of this page to see the `local.#code` key on the JSON.",
+            "```{\n  \"#future\": \"is here\"\n}```",
+            "You can check the source code of this page to see the `#future` key on the JSON.",
             "Now, I can show this information easily using the new **hyperdata** feature `\\{{ }}`:",
-            "``` The code is \\{{ local.#code }}. ```",
+            "``` The future \\{{ #future }}. ```",
             "Which will output",
-            { "capture": "The code is {{ local.#code }}" },
+            { "capture": "The future {{ #future }}" },
             "I can reference any part of the JSON, just using the information path.",
             "But every page on a website in WDR is a valid JSON, so I can capture information of any page too.", 
             "Let’s do this by putting an URL in front of the JSON path:",
