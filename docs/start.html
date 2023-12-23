@@ -2,7 +2,7 @@
     "#title": "WDR Get Started",
     "subtitle": "Web Data Render",
     "name": "WDR",
-    "menu": "[Home](/) [Get Started](/start.html) [Updates](/updates.html)",
+    "menu": "[Home](/wdr/) [Get Started](/wdr/start.html) [Updates](/wdr/updates.html)",
     "title": "Get Started",
     "usage": {
         "description": [
@@ -23,7 +23,7 @@
         "title": "Basic render",
         "description": [
             "The basic render is the easiest way to create a website using WDR (used on this very website!).",
-            "Access the [Basic Render](/basic-render.html) page to download the render script and get instructions.",
+            "Access the [Basic Render](/wdr/basic-render.html) page to download the render script and get instructions.",
             "If you want more control over the rendering process, follow the instructions in the next section to create your own render script."
         ]
     },
@@ -36,14 +36,14 @@
             "```import loader from 'wdr-loader';\nloader(data => render(data));```",
             "Create a `render` function to render the HTML page. Below is an example using simple `innerHTML`:",
             "```function render(data) {\n    document.head.innerHTML = `\n      &lt;meta charset=\"utf-8\"&gt;\n      &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /&gt;\n      &lt;title&gt;${data.title}&lt;/title&gt;`;\n\n    document.body.innerHTML = `\n      &lt;section&gt;\n        &lt;h1&gt;${data.title}&lt;/h1&gt;\n        &lt;p&gt;${data.description}&lt;p&gt;\n      &lt;/section&gt;`;\n}```",
-            "The `wdr-loader` code is available on [GitHub](//github.com/webdatarender/wdr-loader) with an example."
+            "The `wdr-loader` code is available on [GitHub](//github.com/devgutt/wdr-loader) with an example."
         ]
     },
     "remarks": {
         "title": "Remarks",
         "description": [
             "• The page is rendered in [quirks mode](//developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) and can present some layout differences on different browsers.",
-            "• Although javascript is necessary to render the page, most search engines, like [Google](https://developers.google.com/speed/pagespeed/insights/?url=webdatarender.com) or [Bing](https://www.bing.com/webmaster/tools/mobile-friendliness), will be able to read the page correctly."
+            "• Although javascript is necessary to render the page, most search engines, like [Google](https://developers.google.com/speed/pagespeed/insights/?url=devgutt.github.io/wdr) or [Bing](https://www.bing.com/webmaster/tools/mobile-friendliness), will be able to read the page correctly."
         ]
     },
     "support": {
@@ -51,10 +51,10 @@
         "description": "Send an [email](mailto:gpiresnt@gmail.com) for support."
     },
     "about": {
-        "logo": "![logo](/img/logo.png)"
+        "logo": "![logo](/wdr/img/logo.png)"
     },
     "#render": {
-        "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-1.1.0.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
-        "css": "/css/main.css"
+        "_": "<html hidden><meta charset=utf-8><script src=/wdr/dist/render-basic-1.1.0.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
+        "css": "/wdr/css/main.css"
     }
 }

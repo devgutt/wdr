@@ -25,9 +25,9 @@
             "I can reference any part of the JSON, just using the information path.",
             "But every page on a website in WDR is a valid JSON, so I can capture information of any page too.", 
             "Let’s do this by putting an URL in front of the JSON path:",
-            "``` The version is \\{{ [/basic-render.html] install.#version }}```",
+            "``` The version is \\{{ [/wdr/basic-render.html] install.#version }}```",
             "This outputs ",
-            { "capture": "The version is {{ [/basic-render.html] install.#version }}" },
+            { "capture": "The version is {{ [/wdr/basic-render.html] install.#version }}" },
             "Because the page `basic-render.html` is a valid JSON and is pure data, I was able to capture and show the information on the fly.",
             "This implies that the **whole website is a database** and can be accessed on any page!"
         ]
@@ -36,10 +36,10 @@
         "title": "Expanding the horizons",
         "desrciption": [
             "Right now you should have figure out where this is going. The website is online. There is no difference between an external or internal page. The hyperdata URL could be any website page if it is a valid JSON. Exactly!",
-            "Let’s demonstrate this with another website that uses WDR, [evaluatly](https://evaluatly.com):",
-            "```Title: \\{{ [https://evaluatly.com] hero.title }}```",
+            "Let’s demonstrate this with another website that uses WDR, [evaluatly](https://devgutt.github.io/evaluatly/):",
+            "```Title: \\{{ [https://devgutt.github.io/evaluatly/] hero.title }}```",
             "that outputs",
-            { "capture": "Title: {{ [https://evaluatly.com] hero.title }}" },
+            { "capture": "Title: {{ [https://devgutt.github.io/evaluatly/] hero.title }}" },
             "And that is it. You just got the information directly from the evaluatly website!",
             "Let this last part sink in for a minute. You just get information from an external website as easy as writing a paragraph.",
             "The information is always **fresh** and **up-to-date**. If the source website is updated, your page will show the same information. No update needed on your part.",
@@ -54,16 +54,15 @@
             "It makes it really easy to get information from any page.",
             "Because the JSON is pure data, it is very lightweight. All the rendering information is elegantly hidden when you capture the JSON.",
             "I believe this is the future of the web. Imagine every website as a source of pure information. Every website an easily accessible database. Sounds like an exciting future to me.",
-            "And you can try it now! Follow the instructions on [Get Started](/start.html) and the [basic render](/basic-render.html). Let me know what you think.",
-            "The hyperdata code is available on [GitHub](//github.com/webdatarender/wdr-render-basic)."
+            "And you can try it now! Follow the instructions on [Get Started](/wdr/start.html) and the [basic render](/wdr/basic-render.html). Let me know what you think.",
+            "The hyperdata code is available on [GitHub](//github.com/devgutt/wdr-render-basic)."
         ]
     },
-    "subscribe": "I'm creating a **blog platform** using WDR. Follow me on [Twitter](//twitter.com/gpiresnt) to be notified when it's ready! ✨",
     "about": {
-        "logo": "![logo](/img/logo.png)"
+        "logo": "![logo](/wdr/img/logo.png)"
     },
     "#render": {
-        "_": "<html hidden><meta charset=utf-8><script src=/dist/render-basic-1.1.0.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
-        "css": "/css/main.css"
+        "_": "<html hidden><meta charset=utf-8><script src=/wdr/dist/render-basic-1.1.0.js></script></html><noscript><style>html{display:block !important; white-space:pre}</style></noscript>",
+        "css": "/wdr/css/main.css"
     }
 }
